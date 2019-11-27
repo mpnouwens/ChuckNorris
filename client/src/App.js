@@ -6,10 +6,7 @@ import logo from "./logo.png";
 import Categories from "./components/Categories";
 import JokeCategory from "./components/JokeCategory";
 import RandomJoke from "./components/RandomJoke";
-import SearchJokes from "./components/SearchJokes";
 import { Link } from "react-router-dom";
-import { connect } from "react-redux";
-import "redux";
 
 //Todo: Add proxy
 const client = new ApolloClient({
@@ -75,15 +72,3 @@ class App extends Component {
   }
 }
 
-const mapState = state => ({
-  joke: state.joke
-});
-
-const mapDispatch = dispatch => ({
-  setSearch: sch => dispatch.joke.search(sch)
-});
-
-export default connect(
-  mapState,
-  mapDispatch
-)(App);
