@@ -1,5 +1,5 @@
 {
-  "name": "chucknorris",
+  "name": "chuck",
   "version": "1.0.0",
   "description": "Consumes the chuck norris API.",
   "main": "server.js",

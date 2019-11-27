@@ -25,39 +25,12 @@ class App extends Component {
               style={{ width: 150, display: "block", margin: "auto" }}
             />
           </div>
-          <div className="row justify-content-center m-3">
-            <div className="col-12 col-md-10 col-lg-8">
-              <div className="card card-sm">
-                <div className="card-body row no-gutters align-items-center">
-                  <div className="col">
-                    <input
-                      placeholder="Search"
-                      ref={input => this.props.setSearch(input)}
-                      type="Search"
-                      value={this.props.joke.search || ""}
-                      className="form-control form-control-lg form-control-borderless"
-                    />
-                  </div>
-                  <div className="col-auto">
-                    <Link
-                      to={`/searchjoke`}
-                      className="btn btn-success"
-                      style={{ width: 150, marginLeft: 10 }}
-                    >
-                      Search
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
           <Route exact path="/" component={Categories} />
           <Route
             exact
             path="/categoryjoke/:categories"
             component={JokeCategory}
           />
-          <Route exact path="/searchjoke" component={SearchJokes} />
           <Route exact path="/random" component={RandomJoke} /> <hr />
           <Link
             to={`/random`}
@@ -72,3 +45,4 @@ class App extends Component {
   }
 }
 
+export default App;
